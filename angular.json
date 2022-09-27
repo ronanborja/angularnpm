@@ -102,6 +102,40 @@
           }
         }
       }
+    },
+    "nx-ronan1205xy-lib": {
+      "projectType": "library",
+      "root": "projects/nx-ronan1205xy-lib",
+      "sourceRoot": "projects/nx-ronan1205xy-lib/src",
+      "prefix": "nx",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/nx-ronan1205xy-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/nx-ronan1205xy-lib/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/nx-ronan1205xy-lib/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/nx-ronan1205xy-lib/src/test.ts",
+            "tsConfig": "projects/nx-ronan1205xy-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/nx-ronan1205xy-lib/karma.conf.js"
+          }
+        }
+      }
     }
+  },
+  "cli": {
+    "analytics": "9e25cfa4-b638-462b-a9e5-77ecef6d3af9"
   }
 }
